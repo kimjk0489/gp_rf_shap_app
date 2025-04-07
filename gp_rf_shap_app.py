@@ -164,7 +164,7 @@ st.pyplot(fig)
 # --- Random Forest Feature Importance ---
 st.subheader("Random Forest 기반 조성 해석")
 
-st.markdown("Gini Importance (트리 분할 기준 중요도)")
+st.markdown("### Gini Importance (트리 분할 기준 중요도)")
 gini_importances = rf_model.feature_importances_
 sorted_idx = np.argsort(gini_importances)
 fig_gini, ax_gini = plt.subplots()
@@ -173,7 +173,7 @@ ax_gini.set_xlabel("Importance")
 ax_gini.set_title("Gini Feature Importance (Random Forest)")
 st.pyplot(fig_gini)
 
-st.markdown("SHAP Importance (예측 기여도 기반 중요도)")
+st.markdown("### SHAP Importance (예측 기여도 기반 중요도)")
 explainer = shap.Explainer(rf_model, X_scaled)
 shap_values = explainer(X_scaled, check_additivity=False)
 fig_shap = plt.figure()
