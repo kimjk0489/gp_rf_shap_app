@@ -1,0 +1,9 @@
+streamlit
+torch
+gpytorch
+botorch
+scikit-learn
+matplotlib
+pandas
+numpy
+pyDOE
